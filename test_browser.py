@@ -37,7 +37,7 @@ class BrowserAcceptance(unittest.TestCase):
         page.keyboard.press("Tab")
         page.keyboard.press("Enter")
         page.wait_for_url("**/#audit" if "?" not in page.url else "**#audit")
-        self.assertIn("Reconcile", page.locator("article").inner_text())
+        page.get_by_text("Reconcile source records and review import exceptions.", exact=True).wait_for()
         page.get_by_role("combobox").select_option("Reservas")
         self.assertEqual(links.count(), 0)
         page.reload()
