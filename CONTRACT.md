@@ -1,0 +1,1 @@
+The bundled corpus is synthetic. Tokens must all occur in a document. Exact title matches outrank body matches. Accent folding and case folding do not translate terms. Only HTTP(S) links to same-origin fragment records are rendered.
